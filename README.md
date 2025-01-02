@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- [Solution URL](https://www.frontendmentor.io/solutions/component---blog-preview-card-with-html-and-css-cHavqxxP5D)
+- [Live Site URL](https://yemima20.github.io/Component-Blog_preview_card/)
 
 ## My process
 
@@ -45,12 +45,11 @@ Users should be able to:
 
 ### What I learned
 
-In this challenge, I learned more about using clamps and CSS pseudo-classes such as first, nth, and last child; CSS function like clamp; maximizing the use of custom variables for repeated values used in creating this card; and use fonts .
+In this challenge, I learned more about using clamps and CSS pseudo-classes such as first, nth, and last child; CSS function like clamp; maximizing the use of custom variables for repeated values used in creating this card; and `@font-face` related to custom fonts.
 
 ### Continued development
 
 Areas that I want to continue focusing on in future projects such as exploring and deepening CSS pseudo-classes and functions.
-
 
 ### Useful resources
 
