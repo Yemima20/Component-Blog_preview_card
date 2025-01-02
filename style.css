@@ -1,0 +1,123 @@
+* {
+  /* css reset */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS */
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+  --black: hsl(0, 0%, 0%);
+  --blue: hsl(228, 45%, 44%);
+  /* SPACING */
+  --space-small: 0.25rem; /**/
+  --space-medium: 0.75rem;
+  --space-big: 1.5rem;
+}
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "Figtree";
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype");
+    font-weight: 300 800;
+    font-stretch: 25% 151%;
+  }
+  .extraBold {
+    font-weight: 800;
+  }
+}
+body {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  place-items: center;
+  min-height: 100vh;
+  gap: 1rem;
+  text-wrap: wrap;
+  font-weight: 500;
+  font-family: "Figtree", sans-serif;
+  background-color: var(--yellow);
+}
+
+h1,
+p,
+span {
+  line-height: 150%;
+}
+
+h1 {
+  font-size: clamp(1.25rem, 5vw - 0.312rem, 1.5rem);
+}
+p,
+span {
+  font-size: clamp(0.75rem, 5.6vw - 1rem, 0.875rem);
+}
+
+/* MAIN */
+/* CARD */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-big);
+  padding: var(--space-big);
+  width: clamp(18.125rem, 74.4vw + 3rem, 24rem);
+  background-color: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--gray-950);
+  box-shadow: 8px 8px var(--black);
+  /* CARD IMAGE */
+  img {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  /* CARD TEXT CONTENT */
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-medium);
+
+    p:first-child {
+      /* card tag */
+      width: min-content;
+      background-color: var(--yellow);
+      border-radius: var(--space-small);
+      padding: var(--space-small) var(--space-medium);
+    }
+    h1,
+    a {
+      text-decoration: none;
+      color: var(--gray-950);
+      :where(:hover, :focus) {
+        cursor: pointer;
+        color: var(--yellow);
+      }
+    }
+    p:nth-child(4) {
+      /* description */
+      max-width: 35ch;
+      color: var(--gray-500);
+    }
+  }
+  /* USER */
+  .user {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: var(--space-medium);
+    img {
+      max-width: 2rem;
+    }
+  }
+}
+
+/* FOOTER */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: var(--blue);
+  }
+}
